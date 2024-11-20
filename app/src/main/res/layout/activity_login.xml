@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,13 +20,13 @@
             android:contentDescription="@string/back_button"
             android:scaleType="fitCenter"
             android:src="@drawable/ic_back"
-            android:tint="@null" />
+            app:tint="@null" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Get Started"
+            android:text="@string/get_started"
             android:gravity="center"
             android:textSize="20sp"
             android:textColor="@color/black" />
@@ -35,26 +36,28 @@
         android:id="@+id/et_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username" />
+        android:hint="@string/username_hint"
+        android:autofillHints="username"/>
 
     <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Password"
-        android:inputType="textPassword" />
+    android:id="@+id/et_password"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:hint="@string/password_hint"
+    android:inputType="textPassword"
+    android:autofillHints="password" />
 
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="@string/login_button" />
 
     <TextView
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Belum punya akun? Register"
+        android:text="@string/register_prompt"
         android:textColor="@color/blue" />
 </LinearLayout>

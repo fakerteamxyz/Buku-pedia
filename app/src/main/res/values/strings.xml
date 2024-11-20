@@ -2,4 +2,14 @@
     <string name="app_name">Buku-pedia</string>
     <string name="run_text">"Temukan buku, Perluas Wawasan, Dan jadilah versi terbaik dari dirimu Dengan Setiap Halaman!"</string>
     <string name="back_button">Back</string>
+    <string name="get_started">Get Started</string>
+    <string name="username_hint">Username</string>
+    <string name="register_prompt">Belum punya akun? Register</string>
+    <string name="login_button">Login</string>
+    <string name="password_hint">Password</string>
+    <string name="upcoming_books">Upcoming Books</string>
+    <string name="latest_books">Latest Books</string>
+    <string name="top_books">Top Books</string>
+    <string name="best_deals">Best Deals</string>
+    <string name="happy_reading">Happy Reading</string>
 </resources>
