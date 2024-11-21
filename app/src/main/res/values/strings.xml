@@ -18,4 +18,17 @@
     <String name="author">author</String>
     <string name="category">category</string>
     <integer name="price">102</integer>
+    <string name="user_email">user_email</string>
+    <string name="user_name">user_name</string>
+    <string name="delivery_address">delivery_address</string>
+    <string name="parkitx_padang_utara">Parkit X, Padang Utara</string>
+    <string name="change">Change</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="total_price">Total: Rp 238.200</string>
+    <string name="pay">Pay</string>
+    <string name="pay_methode">Payment Method</string>
+    <string name="street_address">Street Address</string>
+    <string name="city">City</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="save_address">Save this Address</string>
 </resources>
