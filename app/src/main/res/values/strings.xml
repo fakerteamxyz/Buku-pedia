@@ -15,5 +15,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="judul_buku">Judul Buku</string>
     <string name="deskripsi_buku">Deskripsi Buku</string>
-
+    <String name="author">author</String>
+    <string name="category">category</string>
+    <integer name="price">102</integer>
 </resources>

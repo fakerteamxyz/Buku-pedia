@@ -3,7 +3,7 @@ package com.fakhri.buku_pedia
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.fakhri.bukupedia.databinding.ActivityMainBinding
+import com.fakhri.buku_pedia.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         loadFragment(HomeFragment())
 
         // Bottom Navigation item click listener
-        binding.bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
+        binding.bottomNavigation.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
                     loadFragment(HomeFragment())
@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // Fungsi untuk mengganti fragment
+    // Function to replace fragment
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, fragment)
+            .replace(R.id.nav_host_fragment, fragment)
             .commit()
     }
 }
