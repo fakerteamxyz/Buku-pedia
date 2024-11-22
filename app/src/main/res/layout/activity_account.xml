@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android"padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_profile"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        amdroi:layout_height="wrap_content"
+        android:text="Name : Fakhri AR"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_email"
+        android:layout_width="match_parent"
+        adnroid:layout_height="wrap_content"
+        android:text="@string/nama_profile"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clueText="@string/clue_text"
+
+    <Button
+        android:id="@+id/btn_edit_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:layout_marginTop="16dp" />
+
+    <button
+        android:id="@+id/btn_logout"
+        android:layout_Width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Logout" />
+</LinearLayout>
