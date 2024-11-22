@@ -31,4 +31,6 @@
     <string name="city">City</string>
     <string name="postal_code">Postal Code</string>
     <string name="save_address">Save this Address</string>
+    <string name="payment_success">Payment Success</string>
+    <string name="thanks_order">Your Order hass been validated.</string>
 </resources>
