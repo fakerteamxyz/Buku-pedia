@@ -11,6 +11,8 @@ class AccountFragment : Fragment() {
 
     private lateinit var textViewUserName: TextView
     private lateinit var textViewUserEmail: TextView
+    private lateinit var textViewPassword: TextView
+    private lateinit var textViewAddress: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,6 +24,8 @@ class AccountFragment : Fragment() {
         // Initialize views
         textViewUserName = view.findViewById(R.id.textViewUserName)
         textViewUserEmail = view.findViewById(R.id.textViewUserEmail)
+        textViewPassword = view.findViewById(R.id.textViewPassword)
+        textViewAddress = view.findViewById(R.id.textViewAddress)
 
         // Set up UI elements here
 

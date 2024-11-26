@@ -1,4 +1,3 @@
-<!-- res/layout/fragment_account.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,15 +8,27 @@
         android:id="@+id/textViewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_name"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+        android:text="User Name"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textViewUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/user_email"
+        android:text="User Email"
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textSize="18sp" />
 </LinearLayout>
