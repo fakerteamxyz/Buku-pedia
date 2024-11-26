@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.fakhri.buku_pedia" />
+                  <option name="mobileSdkAppId" value="1:766992253247:android:5190d96a6d16a61036938a" />
+                  <option name="projectId" value="buku-pedia-f37b9" />
+                  <option name="projectNumber" value="766992253247" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

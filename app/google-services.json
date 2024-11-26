@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766992253247",
+    "project_id": "buku-pedia-f37b9",
+    "storage_bucket": "buku-pedia-f37b9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766992253247:android:5190d96a6d16a61036938a",
+        "android_client_info": {
+          "package_name": "com.fakhri.buku_pedia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs-WamBlQqcHd-sV0sZvmY5UsLRSnVWr8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
