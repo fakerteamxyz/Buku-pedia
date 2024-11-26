@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Filter Tipe Buku -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/rb_ebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ebook" />
+        <RadioButton
+            android:id="@+id/rb_softcover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Softcover" />
+    </RadioGroup>
+
+    <!-- Filter Harga -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Price Range"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <SeekBar
+        android:id="@+id/seekbar_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="300"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/tv_price_range"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rp 0 - Rp 300"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tombol Reset dan Apply -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply" />
+    </LinearLayout>
+</LinearLayout>

@@ -10,34 +10,34 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="700dp"
-    android:layout_marginTop="-200dp">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="700dp"
+            android:layout_marginTop="-200dp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bgbuku" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bgbuku" />
 
-    <ImageView
-        android:layout_width="315dp"
-        android:layout_height="315dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="140dp"
-        android:src="@drawable/ic_logo" />
-</FrameLayout>
+            <ImageView
+                android:layout_width="315dp"
+                android:layout_height="315dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="140dp"
+                android:src="@drawable/ic_logo" />
+        </FrameLayout>
 
         <TextView
-    android:layout_width="match_parent"
-    android:layout_height="73dp"
-    android:layout_margin="16dp"
-    android:gravity="center"
-    android:text="@string/run_text"
-    android:textColor="@color/black"
-    android:textSize="16sp"
-            android:fontFamily="@font/KGRedHands"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="@string/run_text"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:fontFamily="@font/KGRedHands" />
     </LinearLayout>
 
     <LinearLayout
