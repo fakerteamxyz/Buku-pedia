@@ -6,10 +6,73 @@
 
     <!-- Judul Kategori -->
     <TextView
-        android:id="@+id/tv_category_title"
+        android:id="@+id/tv_category_agama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Category: Classics"
+        android:text="Category: Agama"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_hukum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Hukum"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_pendidikan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Pendidikan"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_alam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Alam"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_arsitektur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Arsitektur"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_biografi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Biografi"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_bisnis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Bisnis"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tv_category_keluarga"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category: Keluarga"
         android:textSize="18sp"
         android:textStyle="bold"
         android:layout_marginBottom="8dp" />

@@ -1,0 +1,66 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <!-- Cover Image -->
+    <ImageView
+        android:id="@+id/book_cover"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/sample_book_cover"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <!-- Book Title -->
+    <TextView
+        android:id="@+id/book_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Book Title"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toTopOf="@id/book_cover"
+        app:layout_constraintStart_toEndOf="@id/book_cover"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Book Genre -->
+    <TextView
+        android:id="@+id/book_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Genre"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:maxLines="1"
+        app:layout_constraintTop_toBottomOf="@id/book_title"
+        app:layout_constraintStart_toEndOf="@id/book_cover"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Book Price -->
+    <TextView
+        android:id="@+id/book_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="Rp 00.000"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/book_genre"
+        app:layout_constraintStart_toEndOf="@id/book_cover"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
