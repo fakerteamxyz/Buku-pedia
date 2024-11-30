@@ -1,3 +1,5 @@
+package com.fakhri.buku_pedia
+
 import com.google.firebase.FirebaseApp
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
