@@ -5,24 +5,24 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/et_name"
+        android:id="@+id/et_Name"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Name"
         android:text="Fakhri AR" />
 
     <EditText
-        android:id="@+id/et_email"
+        android:id="@+id/et_Email"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Email"
         android:layout_marginTop="8dp"
         android:text="FakhriAR55@email.com" />
 
     <EditText
-        android:id="@+id/et_password"
+        android:id="@+id/et_Password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:hint="Password"
         android:layout_marginTop="8dp"
         android:inputType="textPassword"
@@ -33,5 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Save Changes" />
+        android:text="Save Changes"
+        android:backgroundTint="@color/black"/>
 </LinearLayout>
