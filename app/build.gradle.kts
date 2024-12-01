@@ -2,8 +2,10 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 
-    // Tambahkan plugin Google Services
+
+    // Add Google Services plugin
     id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -40,7 +42,7 @@ android {
 }
 
 dependencies {
-    // Tambahkan dependensi utama
+    // Add main dependencies
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -59,6 +61,14 @@ dependencies {
     // Firebase Analytics
     implementation("com.google.firebase:firebase-analytics")
 
-    // Firebase Auth (jika diperlukan)
+    // Firebase Auth (if needed)
     implementation("com.google.firebase:firebase-auth")
+
+    // Fetch Api Scrapping Gramedia
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    //Glide
+    implementation("com.github.bumptech.glide:glide:4.15.1")
+    kapt("com.github.bumptech.glide:compiler:4.15.1")
 }

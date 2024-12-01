@@ -9,7 +9,8 @@
         android:id="@+id/iv_check"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@drawable/ic_payment_success" />
+        android:src="@drawable/ic_payment_success"
+        android:contentDescription="@string/payment"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +18,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/payment"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:fontFamily="@font/roboto_medium" />
 
 
 

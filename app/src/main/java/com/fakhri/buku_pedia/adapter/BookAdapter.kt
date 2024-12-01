@@ -3,12 +3,21 @@ package com.fakhri.buku_pedia.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.fakhri.buku_pedia.R
+import com.fakhri.buku_pedia.api.Book
 
-data class Book(val title: String, val author: String, val price: String, val genre: String, val cover: Int)
+class BooksAdapter : RecyclerView.Adapter<BooksAdapter.BookViewHolder>() {
 
-class BooksAdapter(private val books: List<Book>) : RecyclerView.Adapter<BooksAdapter.BookViewHolder>() {
+    private var books: List<Book> = listOf()
+
+    fun submitList(bookList: List<Book>) {
+        books = bookList
+        notifyDataSetChanged()
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_book, parent, false)
@@ -16,15 +25,22 @@ class BooksAdapter(private val books: List<Book>) : RecyclerView.Adapter<BooksAd
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        val book = books[position]
-        // Bind data to the views
+        holder.bind(books[position])
     }
 
-    override fun getItemCount(): Int {
-        return books.size
-    }
+    override fun getItemCount(): Int = books.size
 
     class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        // Initialize views
+        private val bookCover: ImageView = itemView.findViewById(R.id.book_cover)
+        private val bookTitle: TextView = itemView.findViewById(R.id.book_title)
+        private val bookAuthor: TextView = itemView.findViewById(R.id.book_genre)
+        private val bookPrice: TextView = itemView.findViewById(R.id.book_price)
+
+        fun bind(book: Book) {
+            bookTitle.text = book.title
+            bookAuthor.text = book.author
+            bookPrice.text = "Rp ${book.final_price}"
+            Glide.with(itemView.context).load(book.image).into(bookCover)
+        }
     }
 }

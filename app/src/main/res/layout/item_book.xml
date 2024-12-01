@@ -11,7 +11,7 @@
         android:layout_width="100dp"
         android:layout_height="140dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/sample_book_cover"
+        android:src="@drawable/examplebook1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

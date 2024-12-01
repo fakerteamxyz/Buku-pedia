@@ -14,8 +14,7 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:hint="@string/Streetadd"
-        android:textColor="@color/high_contrast_text"
-        android:hint="@string/Streetadd"/>
+        android:textColor="@color/high_contrast_text"/>
 
     <EditText
         android:id="@+id/et_city"
@@ -59,7 +58,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/button_cancel_background"
+            android:background="?android:attr/selectableItemBackground"
             android:textColor="@android:color/black"
             android:text="Cancel" />
     </LinearLayout>

@@ -19,13 +19,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bgbuku" />
+                android:src="@drawable/bgbuku"
+                android:contentDescription="buku"/>
 
             <ImageView
                 android:layout_width="315dp"
                 android:layout_height="315dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="140dp"
+                android:contentDescription="logo"
                 android:src="@drawable/ic_logo" />
         </FrameLayout>
 
@@ -37,7 +39,7 @@
             android:text="@string/run_text"
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:fontFamily="@font/KGRedHands" />
+            android:fontFamily="@font/roboto_medium" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,14 +54,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:text="Get Started" />
+            android:text="Get Started"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/black"/>
 
         <Button
             android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
-            android:backgroundTint="@color/grey"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
             android:text="Register" />
     </LinearLayout>
 </LinearLayout>

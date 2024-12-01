@@ -15,7 +15,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="judul_buku">Judul Buku</string>
     <string name="deskripsi_buku">Deskripsi Buku</string>
-    <String name="author">author</String>
+    <string name="author">author</string>
     <string name="category">category</string>
     <integer name="price">102</integer>
     <string name="user_email">user_email</string>
@@ -35,7 +35,7 @@
     <string name="thanks_order">Your Order hass been validated.</string>
     <string name="nama_profile">Nama : Fakhri AR</string>
     <string name="clue_text">Password : ********</string>
-    <string nane="edit_profile">Edit Profile</string>
+    <string name="edit_profile">Edit Profile</string>
     <string name="type_buku">Type</string>
     <string name="Ebook">Softcover</string>
     <string name="Price_Range">Price Range</string>
@@ -48,4 +48,20 @@
     <string name="Sign">Already a member? Sign in</string>
     <string name="Streetadd">Street Address</string>
     <string name="search_icon_description">Search Icon</string>
+    <string name="textbook1">Dalam buku ini, Anda akan mempelajari prinsip-prinsip yang ditetapkan Dale Carnegie, yang dikembangkan para penerusnya, dan yang diterapkan oleh jutaan orang. Anda juga akan belajar cara memprogram pendekatan untuk menghadapi berbagai situasi dalam hidup ini. Anda akan belajar cara mendiagnosis kekuatan dan kelemahan Anda serta cara meningkatkan kekuatan sekaligus mengatasi kelemahan.
+Aspek-aspek peningkatan hidup yang akan Anda peroleh dari buku ini adalah sebagai berikut.
+Cara menyeimbangkan fase-fase utama hidup Anda: pribadi, keluarga, pekerjaan dan karier, aktivitas sosial, dan lainnya.
+Cara meminimalkan stres dan kecemasan.
+Cara mengembangkan gaya hidup sehat.
+Cara berinteraksi paling efektif dengan orang lain.
+Cara menjadi pribadi yang karismatik.
+Cara menghadapi orang-orang yang rumit.
+Cara mengendalikan emosi Anda.
+Dalam menerapkan prinsip-prinsip ini, pahami cara Anda sekarang dalam menghadapi tuntutan hidup. Untuk membantu mengidentifikasi sifat-sifat tersebut dan menunjukkan kebutuhan khusus, dalam buku ini, Anda akan menemukan inventori yang dikelola sendiri untuk mengidentifikasi keunggulan dan dalam berbagai bidang hidup Anda.</string>
+    <string name="payment">Payment Success</string>
+    <string name="email1">Email</string>
+    <string name="password1">Password</string>
+    <string name="confirm1">Confirm</string>
+    <string name="bukupedia">Bukupedia</string>
+    <string name="book_price">Rp %1$s</string>
 </resources>

@@ -1,48 +1,52 @@
 package com.fakhri.buku_pedia
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import android.widget.SearchView
-import android.widget.TextView
+import com.fakhri.buku_pedia.api.RetrofitClient
+import com.fakhri.buku_pedia.adapter.BooksAdapter
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
-    private lateinit var searchView: SearchView
-    private lateinit var textViewHeaderTitle: TextView
-    private lateinit var textViewHeaderSubtitle: TextView
-    private lateinit var rvBestDeals: RecyclerView
-    private lateinit var textViewTopBooks: TextView
-    private lateinit var rvTopBooks: RecyclerView
-    private lateinit var textViewLatestBooks: TextView
-    private lateinit var rvLatestBooks: RecyclerView
-    private lateinit var textViewUpcomingBooks: TextView
-    private lateinit var rvUpcomingBooks: RecyclerView
+    private lateinit var bestSellingBooksRecyclerView: RecyclerView
+    private lateinit var bestSellingBooksAdapter: BooksAdapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_home, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        // Initialize views
-        searchView = view.findViewById(R.id.searchView)
-        textViewHeaderTitle = view.findViewById(R.id.textViewHeaderTitle)
-        textViewHeaderSubtitle = view.findViewById(R.id.textViewHeaderSubtitle)
-        rvBestDeals = view.findViewById(R.id.rv_best_deals)
-        textViewTopBooks = view.findViewById(R.id.textViewTopBooks)
-        rvTopBooks = view.findViewById(R.id.rv_top_books)
-        textViewLatestBooks = view.findViewById(R.id.textViewLatestBooks)
-        rvLatestBooks = view.findViewById(R.id.rv_latest_books)
-        textViewUpcomingBooks = view.findViewById(R.id.textViewUpcomingBooks)
-        rvUpcomingBooks = view.findViewById(R.id.rv_upcoming_books)
+        bestSellingBooksRecyclerView = view.findViewById(R.id.rv_best_deals)
+        bestSellingBooksRecyclerView.layoutManager =
+            LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        bestSellingBooksAdapter = BooksAdapter()
+        bestSellingBooksRecyclerView.adapter = bestSellingBooksAdapter
 
-        // Set up RecyclerViews, SearchView, and other UI elements here
-
-        return view
+        fetchBestSellingBooks()
     }
-}
+
+    private fun fetchBestSellingBooks() {
+        lifecycleScope.launch {
+            try {
+                val response = RetrofitClient.instance.getBestSellingBooks().execute()
+                if (response.isSuccessful) {
+                    val apiResponse = response.body()
+                    if (apiResponse != null) {
+                        bestSellingBooksAdapter.submitList(apiResponse.data)
+                    } else {
+                        Toast.makeText(context, "Response body is null", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    val errorBody = response.errorBody()?.string()
+                    Toast.makeText(context, "Failed to load data: $errorBody", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+    }
