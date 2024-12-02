@@ -6,10 +6,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.fakhri.buku_pedia.api.RetrofitClient
 import com.fakhri.buku_pedia.adapter.BooksAdapter
-import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.launch
+import com.fakhri.buku_pedia.book.Book
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -29,24 +31,24 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun fetchBestSellingBooks() {
-        lifecycleScope.launch {
-            try {
-                val response = RetrofitClient.instance.getBestSellingBooks().execute()
-                if (response.isSuccessful) {
-                    val apiResponse = response.body()
-                    if (apiResponse != null) {
-                        bestSellingBooksAdapter.submitList(apiResponse.data)
-                    } else {
-                        Toast.makeText(context, "Response body is null", Toast.LENGTH_SHORT).show()
+        val database = FirebaseDatabase.getInstance()
+        val myRef = database.getReference("books")
+
+        myRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val bookList = mutableListOf<Book>()
+                for (snapshot in dataSnapshot.children) {
+                    val book = snapshot.getValue(Book::class.java)
+                    if (book != null) {
+                        bookList.add(book)
                     }
-                } else {
-                    val errorBody = response.errorBody()?.string()
-                    Toast.makeText(context, "Failed to load data: $errorBody", Toast.LENGTH_SHORT).show()
                 }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                Toast.makeText(context, "Error: ${e.message}", Toast.LENGTH_SHORT).show()
+                bestSellingBooksAdapter.submitList(bookList)
             }
-        }
+
+            override fun onCancelled(error: DatabaseError) {
+                Toast.makeText(context, "Failed to load data: ${error.message}", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
-    }
+}

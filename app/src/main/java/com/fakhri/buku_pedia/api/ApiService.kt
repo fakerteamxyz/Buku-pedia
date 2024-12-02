@@ -1,5 +1,6 @@
 package com.fakhri.buku_pedia.api
 
+import com.fakhri.buku_pedia.book.Book
 import retrofit2.Call
 import retrofit2.http.GET
 

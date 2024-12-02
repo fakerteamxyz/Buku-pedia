@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.fakhri.buku_pedia.R
-import com.fakhri.buku_pedia.api.Book
+import com.fakhri.buku_pedia.book.Book
 
 class BooksAdapter : RecyclerView.Adapter<BooksAdapter.BookViewHolder>() {
 
@@ -33,13 +33,13 @@ class BooksAdapter : RecyclerView.Adapter<BooksAdapter.BookViewHolder>() {
     class BookViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val bookCover: ImageView = itemView.findViewById(R.id.book_cover)
         private val bookTitle: TextView = itemView.findViewById(R.id.book_title)
-        private val bookAuthor: TextView = itemView.findViewById(R.id.book_genre)
+        private val bookAuthor: TextView = itemView.findViewById(R.id.book_author)
         private val bookPrice: TextView = itemView.findViewById(R.id.book_price)
 
         fun bind(book: Book) {
             bookTitle.text = book.title
             bookAuthor.text = book.author
-            bookPrice.text = "Rp ${book.final_price}"
+            bookPrice.text = "Rp ${book.finalPrice}"
             Glide.with(itemView.context).load(book.image).into(bookCover)
         }
     }
