@@ -6,5 +6,6 @@
     <color name="blue">#FF4285F4</color>
     <color name="green">#FF34A853</color>
     <color name="high_contrast_text">#000000</color>
+    <color name="gray_500">#9E9E9E</color>
 </resources>
 
